@@ -11,3 +11,8 @@ Written in Go, `secure-promt` embeds an LLM-powered DevOps assistant directly in
 **Command interception firewall.** A `bash` DEBUG trap intercepts every shell command executed during the CI job. Commands are checked against a strict allowlist before execution, blocking script-injection attacks that could otherwise hijack the agent's shell access.
 
 **Dynamic tooling via MCP.** The agent discovers available tools at runtime from a catalog of MCP servers (Model Context Protocol — JSON-RPC over SSE). This gives it access to structured integrations like GitLab API calls, Kubernetes log retrieval, and Helm operations, without relying solely on raw shell commands. The LLM backend is provided by [langchaingo](https://github.com/tmc/langchaingo).
+
+## Demo
+
+![Secure prompt](img1.png)
+![Agent execution in pipeline](img2.png)
